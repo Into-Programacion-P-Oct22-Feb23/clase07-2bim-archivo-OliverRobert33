@@ -104,9 +104,11 @@ public class LeerArchivoTexto {
                 String linea = entrada.nextLine();
                 List<String> lista = Arrays.asList(linea.split(";"));
                 ArrayList<String> linea_partes = new ArrayList<>(lista);
-                for (int i = 0; i < linea_partes.size(); i++) {
-                    System.out.println(linea_partes.get(i));
-                }
+                System.out.printf("Nombre de Materia: %s\n", linea_partes.get(0));
+                System.out.printf("Promedio de notas: %s\n",linea_partes.get(1));
+                System.out.printf("Nombre de Docente: %s\n",linea_partes.get(2));
+                System.out.printf("Tipo de Contraro: %s\n",linea_partes.get(3));
+                
                 System.out.println("-----------------------------------");
 
             } // fin de while
@@ -120,8 +122,32 @@ public class LeerArchivoTexto {
     // cierra el archivo y termina la aplicaci�n
 
     
-} // fin de la clase LeerArchivoTexto
+ // fin de la clase LeerArchivoTexto
+    public static void leerRegistros05(){
+       try // lee registros del archivo, usando el objeto Scanner
+        {
+            Scanner entrada = new Scanner(new File("data/datosTres.txt"));
 
+            while (entrada.hasNext()) {
+                String linea = entrada.nextLine();
+                List<String> lista = Arrays.asList(linea.split(";"));
+                ArrayList<String> linea_partes = new ArrayList<>(lista);
+                System.out.printf("%s\n", linea_partes.get(2));
+                System.out.println("-----------------------------------");
+
+            } // fin de while
+            entrada.close();
+        } // fin de try
+        catch (Exception e) {
+            System.err.println("Error al leer del archivo.");
+            System.exit(1); 
+        } // fin de catch
+    } 
+
+    
+  
+
+}
 /**************************************************************************
  * (C) Copyright 1992-2007 por Deitel & Associates, Inc. y                *
  * Pearson Education, Inc. Todos los derechos reservados.                 *

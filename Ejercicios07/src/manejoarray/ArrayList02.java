@@ -25,6 +25,7 @@ public class ArrayList02 {
         Scanner entrada = new Scanner(System.in);
         ArrayList<String> arreglo2 = new ArrayList<>();
         boolean bandera = true;
+        
         String pais;
         while (bandera) {
 
@@ -44,6 +45,7 @@ public class ArrayList02 {
 
     public static String obtenerCadenaFinal(ArrayList<String> datos) {
         String cadena = "";
+        System.out.println("Los datos Ingresados son:\n");
         for (int i = 0; i < datos.size(); i++) {
             cadena = String.format("%s%s\t",cadena , datos.get(i));
         }
