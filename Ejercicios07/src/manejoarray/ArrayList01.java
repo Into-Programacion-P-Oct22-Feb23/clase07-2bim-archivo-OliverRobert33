@@ -7,6 +7,7 @@ package manejoarray;
 
 // import java.util.ArrayList;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -29,12 +30,10 @@ public class ArrayList01 {
         arreglo.add(2000);
         arreglo.add(3000);
 
-        for (int i = 0; i < arreglo.size(); i++) {
-            System.out.println(arreglo.get(i));
-        }
-
-        System.out.println("----------------------------------");
-
+        //for (int i = 0; i < arreglo.size(); i++) {
+        //     System.out.println(arreglo.get(i));
+        //}
+        //System.out.println("----------------------------------");
         ArrayList<Double> arreglo3 = new ArrayList<>();
 
         arreglo3.add(10.2);
@@ -42,15 +41,31 @@ public class ArrayList01 {
         arreglo3.add(12.2);
         arreglo3.add(13.2);
 
-        for (int i = 0; i < arreglo3.size(); i++) {
-            System.out.println(arreglo3.get(i));
-        }
-
-        System.out.println("----------------------------------");
+        //for (int i = 0; i < arreglo3.size(); i++) {
+        //    System.out.println(arreglo3.get(i));
+        //}
+        //System.out.println("----------------------------------");
         ArrayList<String> arreglo2 = new ArrayList<>();
+        Scanner entrada = new Scanner(System.in);
+        boolean bandera = true;
+        String pais;
+        while (bandera) {
 
-        
-        
+            System.out.println("Ingrese datos para el arreglo: ");
+            pais = entrada.nextLine();
+            arreglo2.add(pais);
+            System.out.println("Ingrese salir si desea terminar el proceso: ");
+            String op = entrada.nextLine();
+
+            if (op.equals("salir")) {
+                bandera = false;
+            }
+
+        }
+        System.out.println("Presentar arreglo en pantalla");
+        for (int i = 0; i < arreglo2.size(); i++) {
+            System.out.println(arreglo2.get(i));
+        }
         /*
         ArrayList <String> arreglo2 = new ArrayList<>();
         
